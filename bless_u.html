@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末考祈福系統</title>
+    <link rel="stylesheet" href="styles/hope.css">
+</head>
+<body>
+    <div class="wrap">
+        
+        <div class="banner">
+
+          <img src="images/background.jpg" alt="">
+          <h1>期末考祝福系統</h1>
+          
+         
+        </div>
+        
+        <a href="aaa.html" title="測試超連結">
+        <img id="mahou_soujou" src="images/east.gif" alt="">
+        <h3 id="gogo1"><-回到piyan</h3></a>
+        
+        <a href="127.0.0.1" title="測試超連結"><img id="mahou_soujou2" src="images/east.gif" alt="">
+        <h3 id="gogo">live stream-></h3></a>
+        
+        <div class="center">
+        
+        <center><h2 id="blesss_u">按此獲得祝福</h2></center>
+        <img id="thumb" src="images/yes_thumb.gif" alt="">
+        
+        </div>
+        
+        <center><h3 id="copy">&copy;四電子三甲陳柏豪B10902033 四電子三甲梁祐豪B10902034</h3></center>
+    </div>
+    <script>
+        const b = document.getElementById('blesss_u')
+        console.log(b);
+        b.onclick=show;
+        function show(event){
+            var im = document.getElementById("thumb");
+            console.log(im);
+            im.style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>

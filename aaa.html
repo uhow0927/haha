@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/aaa.css">
+</head>
+<body>
+    
+    <!---->
+    <div class="wrap">
+        
+        <div class="banner">
+          <a href="bless_u.html" title="測試超連結"><img id="piyan" src="images/hahapiyan.jpg" width="250" height="250" ></a>
+          <a href="lobby.html" title="測試超連結"><img id="piyan2" src="images/corgi.jpg" width="250" height="250" ></a>
+          <h3 id="copy">&copy;四電子三甲陳柏豪B10902033 四電子三甲梁祐豪B10902034</h3>
+          <div id="option"></div>
+          <video autoplay muted loop>
+            <source src="aaa.mp4" type="video/mp4">
+          </video>
+          
+          <h2>ha ha piyan</h2>
+          
+        </div>
+    </div>
+      <script>
+        const img = document.getElementById('piyan');
+        const img2 = document.getElementById('piyan2');
+        const copy = document.getElementById('copy');
+        console.log(copy);
+        var x=-750;
+        var xspeed=10;
+        var y=-750;
+        var yspeed =10;
+
+        var x2=300;
+        var x2speed=10;
+        var y2=-500;
+        var yspeed=10;
+        
+        var x3=450;
+        var x3speed = 5;
+        var y3=-450;
+        var y3speed=5;
+        /*shift偵測邊界的直怪怪的是因為在css裡我把所有東西都置中了*/
+        function shift(){/*應該要寫成可以直接吃input進來的物件直接做操作但我實在是好懶*/
+          if(x>((window.innerWidth/2)+250)){/*如果圖片越大值要越大(碰撞偵測為圖片中心點)*/
+            xspeed=-4;
+          }
+          if(x<((window.innerWidth/2)-window.innerWidth+500)){
+            xspeed=4;
+          }
+          if(y>((window.innerHeight/2))-125){
+            yspeed=-4;
+          }
+          if(y<((window.innerHeight/2))-window.innerHeight+125){
+            yspeed=4;
+          }
+          x+=xspeed;
+          y+=yspeed;
+
+          img.style.left=x+"px";
+          img.style.top =y+"px";
+          setTimeout("shift()",20);
+        }
+
+        function shift2(){/*應該要寫成可以直接吃input進來的物件直接做操作但我實在是好懶*/
+          if(x2>((window.innerWidth/2)-140)){/*如果圖片越大值要越大(碰撞偵測為圖片中心點)*/
+            x2speed=-4;
+          }
+          if(x2<((window.innerWidth/2)-window.innerWidth)+90){
+            x2speed=4;
+          }
+          if(y2>((window.innerHeight/2))-125){
+            y2speed=-4;
+          }
+          if(y2<((window.innerHeight/2))-window.innerHeight+125){
+            y2speed=4;
+          }
+          x2+=x2speed;
+          y2+=y2speed;
+
+          img2.style.left=x2+"px";
+          img2.style.top =y2+"px";
+          setTimeout("shift2()",20);
+        }
+        function shift3(){/*應該要寫成可以直接吃input進來的物件直接做操作但我實在是好懶*/
+          if(x3>((window.innerWidth/2)-365)){/*如果圖片越大值要越大(碰撞偵測為圖片中心點)*/
+            x3speed=-5;
+          }
+          if(x3<((window.innerWidth/2)-window.innerWidth)-140){
+            x3speed=5;
+          }
+          if(y3>((window.innerHeight/2))-10){
+            y3speed=-5;
+          }
+          if(y3<((window.innerHeight/2))-window.innerHeight+15){
+            y3speed=5;
+          }
+          x3+=x3speed;
+          y3+=y3speed;
+
+          copy.style.left=x3+"px";
+          copy.style.top =y3+"px";
+          setTimeout("shift3()",20);
+          
+        }
+        
+        shift();
+        shift2();
+        shift3();
+      </script>
+</body>
+</html>

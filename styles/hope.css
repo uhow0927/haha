@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif,'Microsoft JhengHei';
+  }
+  .banner{
+    width: 100%;
+    height: 100vh;/*圖片大小改變這裡也要改來維持比例? vh為可視範圍內顯示的比例*/
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    
+    justify-content: center;
+    /*align-items:center;*/
+  }
+  .banner img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    object-fit: cover;
+    mix-blend-mode: darken;
+    opacity: 0.8;
+    filter: blur(3px);
+  }
+  h1{
+      font-size: 10vh;
+  }
+  h2{
+      position: relative;
+  }
+  .center{
+    justify-content: center;
+    align-items:center;
+  }
+  #blesss_u{
+    top: 20%;
+    font-size: 8vh;
+    position: absolute;
+    background-color: coral;
+    color: aliceblue;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  #copy{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 10px;
+  }
+  #mahou_soujou{
+    position: relative;
+  }
+  #mahou_soujou2{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  #pic1{
+    position: absolute;
+    left: 35%;
+    top:13%
+  }
+  #gogo1{
+    position: absolute;
+    left: 10px;
+  }
+  #gogo{
+    position: absolute;
+    right: 10px;
+  }
+  #thumb{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    width: 40%;
+    height: 50%;
+    visibility:hidden;
+  }
+  #input1{
+    position: absolute;
+    left: 30%;
+    top: 50%;
+  }
+  #input2{
+    position: absolute;
+    left: 30%;
+    top: 55%;
+  }
